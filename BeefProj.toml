@@ -1,0 +1,6 @@
+FileVersion = 1
+
+[Project]
+Name = "Machines"
+TargetType = "BeefLib"
+StartupObject = "Machines.Program"

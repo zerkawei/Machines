@@ -1,0 +1,5 @@
+FileVersion = 1
+Projects = {Machines = {Path = "."}, MachinesTest = {Path = "MachinesTest"}}
+
+[Workspace]
+StartupProject = "MachinesTest"
