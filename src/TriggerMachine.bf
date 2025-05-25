@@ -1,6 +1,6 @@
 namespace Machines;
 
-public class TriggerMachine<T, D> where D : struct
+public class TriggerMachine<T, D>
 {
 	private StateGraph<T, D> states;
 	private Cursor<T, D> cursor ~ delete _;

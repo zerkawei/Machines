@@ -3,7 +3,7 @@ namespace Machines;
 public abstract class Transition<T> : Transition<T, void>;
 public abstract class Transition<T, D>
 {
-	public State<T, D> Target { get; }
+	public State<T, D> Target { get; set; }
 
 	public this(State<T, D> target)
 	{
