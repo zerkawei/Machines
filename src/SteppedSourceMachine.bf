@@ -1,7 +1,7 @@
 using System.Collections;
 namespace Machines;
 
-public abstract class SteppedSourceMachine<T, D> : SourceMachine<T, D> where D : struct
+public abstract class SteppedSourceMachine<T, D> : SourceMachine<T, D>
 {
 	private List<Cursor<T, D>> cursors ~ DeleteContainerAndItems!(_);
 

@@ -1,7 +1,7 @@
 using System.Threading;
 namespace Machines;
 
-public abstract class ThreadedSourceMachine<T, D> : SourceMachine<T, D> where D : struct
+public abstract class ThreadedSourceMachine<T, D> : SourceMachine<T, D>
 {
 	public this(StateGraph<T, D> states, T source) : base(states, source) {}
 

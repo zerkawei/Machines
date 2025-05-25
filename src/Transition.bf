@@ -1,7 +1,7 @@
 namespace Machines;
 
 public abstract class Transition<T> : Transition<T, void>;
-public abstract class Transition<T, D> where D : struct
+public abstract class Transition<T, D>
 {
 	public State<T, D> Target { get; }
 
@@ -17,7 +17,7 @@ public abstract class Transition<T, D> where D : struct
 	}
 }
 
-public abstract class StepTransition<T, D> : Transition<T, D> where D : IPositioned, struct
+public abstract class StepTransition<T, D> : Transition<T, D> where D : IPositioned
 {
 	public abstract int Step { get; }
 

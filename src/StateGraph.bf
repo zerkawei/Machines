@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 namespace Machines;
 
-public struct StateGraph<T, D> : IDisposable where D : struct
+public struct StateGraph<T, D> : IDisposable
 {
 	public State<T, D> Start;
 

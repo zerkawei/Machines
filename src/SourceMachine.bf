@@ -1,7 +1,7 @@
 using System.Collections;
 namespace Machines;
 
-public abstract class SourceMachine<T, D> where D : struct
+public abstract class SourceMachine<T, D>
 {
 	protected StateGraph<T, D> states;
 	protected T source;

@@ -1,7 +1,7 @@
 using System.Collections;
 namespace Machines;
 
-public class State<T, D> where D : struct
+public class State<T, D>
 {
 	public bool IsAccepting { get; }
 	public List<Transition<T, D>> Transitions { get; }
