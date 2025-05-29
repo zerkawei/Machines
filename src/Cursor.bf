@@ -37,7 +37,7 @@ public extension Cursor<T, D> where D : IClonable, Object, delete, new
 	{
 		let d = data;
 		data = null;
-		return data;
+		return d;
 	}
 }
 
