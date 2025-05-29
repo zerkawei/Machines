@@ -3,7 +3,7 @@ namespace Machines;
 
 public class State<T, D>
 {
-	public bool IsAccepting { get; }
+	public bool IsAccepting { get; set; }
 	public List<Transition<T, D>> Transitions { get; }
 
 	public this(bool isAccepting = false, params Transition<T, D>[] transitions)
