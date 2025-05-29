@@ -6,7 +6,7 @@ public class State<T, D>
 	public bool IsAccepting { get; }
 	public List<Transition<T, D>> Transitions { get; }
 
-	public this(bool isAccepting, params Transition<T, D>[] transitions)
+	public this(bool isAccepting = false, params Transition<T, D>[] transitions)
 	{
 		IsAccepting = isAccepting;
 		Transitions = new .(transitions.Count);
