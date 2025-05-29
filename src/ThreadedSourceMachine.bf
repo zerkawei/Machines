@@ -5,7 +5,7 @@ public abstract class ThreadedSourceMachine<T, D> : SourceMachine<T, D>
 {
 	public this(StateGraph<T, D> states, T source) : base(states, source) {}
 
-	public override void Run()
+	protected override void RunAfterReset()
 	{
 		RunCursor(new .(states.Start, InitCursorData()));
 	}

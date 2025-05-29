@@ -9,7 +9,13 @@ public abstract class SourceMachine<T, D>
 	public this(StateGraph<T, D> states, T source)
 	{
 		this.states = states;
-		this.source = source;
+		this.source = source; 
+	}
+
+	public void Run()
+	{
+		Reset();
+		RunAfterReset();
 	}
 
 	public virtual D InitCursorData()
@@ -17,9 +23,11 @@ public abstract class SourceMachine<T, D>
 		return default;
 	}
 
-	public abstract void Run();
+	public abstract void Reset();
 
-	public abstract bool HandleStuckCursor(Cursor<T, D> cursor);
+	protected abstract bool HandleStuckCursor(Cursor<T, D> cursor);
+
+	protected abstract void RunAfterReset();
 
 	protected abstract void Accept(D data);
 

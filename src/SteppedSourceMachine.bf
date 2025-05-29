@@ -11,15 +11,14 @@ public abstract class SteppedSourceMachine<T, D> : SourceMachine<T, D>
 		Reset();
 	}
 
-	public virtual void Reset()
+	public override void Reset()
 	{
 		cursors.ClearAndDeleteItems();
 		cursors.Add(new .(states.Start, InitCursorData()));
 	}
 
-	public override void Run()
+	protected override void RunAfterReset()
 	{
-		Reset();
 		while(StepAll()) {}
 	}
 
