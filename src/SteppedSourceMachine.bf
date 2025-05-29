@@ -8,7 +8,6 @@ public abstract class SteppedSourceMachine<T, D> : SourceMachine<T, D>
 	public this(StateGraph<T, D> states, T source) : base(states, source)
 	{
 		this.cursors = new .();
-		Reset();
 	}
 
 	public override void Reset()
