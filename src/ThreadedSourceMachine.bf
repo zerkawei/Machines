@@ -17,7 +17,7 @@ public abstract class ThreadedSourceMachine<T, D> : SourceMachine<T, D>
 		{
 			if(cursor.Current.IsAccepting)
 			{
-				Accept(cursor.Data);
+				Accept(cursor.TakeData());
 			}
 
 			Transition<T, D> firstTransition = null;

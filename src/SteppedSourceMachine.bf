@@ -30,7 +30,7 @@ public abstract class SteppedSourceMachine<T, D> : SourceMachine<T, D>
 			var cursor = cursors[i];
 			if(cursor.Current.IsAccepting)
 			{
-				Accept(cursor.Data);
+				Accept(cursor.TakeData());
 			}
 			if(!Step(cursor))
 			{

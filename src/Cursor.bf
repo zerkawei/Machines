@@ -16,6 +16,8 @@ public class Cursor<T, D>
 	}
 	public this(State<T, D> current) : this(current, default) {}
 	public virtual this(Self copy) : this(copy.Current) {}
+
+	public virtual D TakeData() => data;
 }
 
 public extension Cursor<T, D> where D : struct
@@ -23,12 +25,19 @@ public extension Cursor<T, D> where D : struct
 	public override this(Self copy) : this(copy.Current, copy.data) {}
 }
 
-public extension Cursor<T, D> where D : IClonable, Object, delete
+public extension Cursor<T, D> where D : IClonable, Object, delete, new
 {
 	public override this(Self copy) : this(copy.Current, copy.data.Clone(.. new D())) {}
 	public ~this()
 	{
 		delete data;
+	}
+
+	public override D TakeData()
+	{
+		let d = data;
+		data = null;
+		return data;
 	}
 }
 
