@@ -18,10 +18,7 @@ public abstract class SourceMachine<T, D>
 		RunAfterReset();
 	}
 
-	public virtual D InitCursorData()
-	{
-		return default;
-	}
+	public abstract D InitCursorData();
 
 	public abstract void Reset();
 
