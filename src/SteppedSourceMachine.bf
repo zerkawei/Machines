@@ -19,6 +19,7 @@ public abstract class SteppedSourceMachine<T, D> : SourceMachine<T, D>
 
 	public override void Run()
 	{
+		Reset();
 		while(StepAll()) {}
 	}
 
